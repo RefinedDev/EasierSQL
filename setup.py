@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="EasierSQL",
-    version="0.0.1",
+    version="0.1.0",
     description="A wrapper for SQLite, Most of the queries wrapped into commands for ease.",
     long_description=long_description,
     long_description_content_type="text/markdown",
