@@ -7,9 +7,9 @@ Before you proceed, make sure you know Some real SQL, before looking at the code
 
 ```py
 
-from EasierSQL import SQLite
+import EasierSQLite
 
-database = SQLite.easierSQLite("dataBaseName")
+database = EasierSQLite.easierSQLite("dataBaseName")
 
 # Creating a table
 
@@ -60,9 +60,9 @@ database.execute_custom_query() # Returns the database, so you can execute Your 
 Example of execute_custom_query()
 
 ```py
-from EasierSQL import SQLite
+import EasierSQLite
 
-database = SQLite.easierSQLite("dataBaseName")
+database = EasierSQLite.easierSQLite("dataBaseName")
 
 tempDB = database.execute_custom_query()
 cursor = tempDB.cursor()
