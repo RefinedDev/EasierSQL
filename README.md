@@ -1,9 +1,10 @@
+Before you proceed, make sure you know Some real SQL, before looking at the code, otherwise you probably won't understand anything.
+
 # Installation
 
 `pip install EasierSQL`
 
 # EasySQLite code examples -:
-Before you proceed, make sure you know Some real SQL, before looking at the code, otherwise you probably won't understand anything.
 
 ```py
 
@@ -74,4 +75,53 @@ cursor.execute("SQL_QUERY")
 tempDB.close() # Close database after done with it for good practice.
 ```
 
-EasyMySQL Coming Soon.
+# EasyMySQL Code example -:
+
+```py
+
+import EasierMySQL
+
+database = EasierMySQL.easierMySQL(
+    userName = 'userNAME',
+    passwrd = 'password',
+    host = 'host'
+    database = 'database'
+)
+
+# Creating a table
+
+created_Table = database.create_Table('table_Name','userName VARCHAR(20) NOT NULL, userID INT PRIMARY KEY')
+
+print(created_Table) # Returns the result.
+
+# Inserting values into a table.
+
+insert = database.insert_values('table_Name','columns_names','values_here')
+
+print(insert) # Returns the result.
+
+# Getting values from a table
+
+selected_value = database.select_values('table_Name', columnNames='column_Names',limit='1000',clauses='here')
+
+print(selected_value) # Returns the list of values (or an error).
+```
+
+Here are all the functions but for EasierMYSQL.
+
+```py
+database.create_Table()
+database.select_values()
+database.insert_values()
+database.delete_table()
+database.create_new_column()
+database.delete_row()
+database.rename_Table()
+database.rename_Column()
+database.attach_database()
+database.detach_database()
+database.delete_column()
+database.show_tables()
+database.execute_custom_query() # Returns the database, so you can execute Your own query, if the module doesn't support that type.
+```
+The execute_custom_query is as same as the One in EasierSQLLite.
