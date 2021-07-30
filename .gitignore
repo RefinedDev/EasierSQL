@@ -1,6 +1,2 @@
 *.db
 __pycache__
-*dist
-*build
-*EasierSQL.egg-info
-setup.py

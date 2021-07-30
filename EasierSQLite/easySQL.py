@@ -182,7 +182,7 @@ class easierSQLite:
             cursor.execute("DETACH DATABASE " + aliasName)
 
             dataBase.close()
-            return 'Attached!'
+            return 'Detached!'
         except Exception as error:
             raise errorTypes.database_detach_error(error)
 

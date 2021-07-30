@@ -73,3 +73,5 @@ cursor.execute("SQL_QUERY")
 
 tempDB.close() # Close database after done with it for good practice.
 ```
+
+EasyMySQL Coming Soon.
