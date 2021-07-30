@@ -1,15 +1,11 @@
 import setuptools
-import subprocess
-
-__version__ = subprocess.run(['git','describe','--tags'],stdout=subprocess.PIPE).stdout.decode('utf-8').strip()
-assert '.' in __version__
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="EasierSQL",
-    version=__version__,
+    version='0.1.1',
     description="A wrapper for SQLite, Most of the queries wrapped into commands for ease.",
     long_description=long_description,
     long_description_content_type="text/markdown",
